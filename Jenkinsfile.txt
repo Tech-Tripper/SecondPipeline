@@ -1,24 +1,12 @@
-pipeline {
-    agent any
 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-                echo  'Build time was slow!!'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-                echo 'I hate testing,too many bugs to detect'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-                echo 'This is my time baby..shipping time..Lets Go'
-            }
-        }
-    }
+pipeline {
+     agent any
+     stages {
+          stage("Hello") {
+               steps {
+                    sleep 300 // 5 minutes
+                    echo 'Hello World'
+               }
+          }
+     }
 }
